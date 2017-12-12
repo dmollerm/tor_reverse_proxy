@@ -1,0 +1,5 @@
+
+Log notice file /var/log/tor/notices.log
+DataDirectory /var/lib/tor
+HiddenServiceDir /var/lib/tor/hiddenservice/
+HiddenServicePort 80 backend:80

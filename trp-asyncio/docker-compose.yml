@@ -1,0 +1,16 @@
+
+version: "2"
+
+services:
+
+  frontend:
+    image: trp-asyncio
+    ports:
+      - "8000:8000"
+    links:
+      - gateway
+
+  gateway:
+    image: osminogin/tor-simple
+    ports:
+      - "9999:9050"

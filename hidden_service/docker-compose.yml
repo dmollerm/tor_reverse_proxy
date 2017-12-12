@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  hiddenservice:
+    image: osminogin/tor-simple
+    volumes:
+      - ./torrc:/etc/tor/torrc
+      - hiddenservice:/var/lib/tor/hiddenservice/
+    links:
+      - backend
+
+  backend:
+    image: httpd
+
+volumes:
+  hiddenservice:

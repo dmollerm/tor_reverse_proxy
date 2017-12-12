@@ -1,0 +1,14 @@
+
+version: "2"
+
+services:
+
+  frontend:
+    image: trp-httpd
+    ports:
+      - "8000:80"
+    links:
+      - gateway
+
+  gateway:
+    image: osminogin/tor-simple
